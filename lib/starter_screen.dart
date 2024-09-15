@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_waste_management/collector/view/login.dart';
+import 'package:food_waste_management/donor/auth/view/login.dart';
 import 'package:lottie/lottie.dart';
 
 class StarterScreen extends StatelessWidget {
@@ -34,7 +36,12 @@ class StarterScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DonorLogin()));
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     foregroundColor: MaterialStateProperty.all(Colors.black),
@@ -45,7 +52,12 @@ class StarterScreen extends StatelessWidget {
                   child: const Text('Continue as Donor'),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CollectorLogin()));
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     foregroundColor: MaterialStateProperty.all(Colors.black),
