@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_waste_management/collector/view/login.dart';
+import 'package:food_waste_management/collector/collector_home.dart';
+
 import 'package:food_waste_management/donor/auth/view/login.dart';
 import 'package:lottie/lottie.dart';
 
@@ -56,7 +57,7 @@ class StarterScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CollectorLogin()));
+                            builder: (context) => const CollectorHome()));
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
